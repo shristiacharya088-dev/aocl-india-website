@@ -56,56 +56,42 @@
         </div>
       </div>
 
-      <form onsubmit="event.preventDefault(); alert('Wire this form up to Formspree or your backend to receive submissions.');">
-        <fieldset>
-          <legend>Your details</legend>
-          <div class="field-row">
-            <div class="field"><label for="name">Contact person *</label><input id="name" type="text" required></div>
-            <div class="field"><label for="company">Company name</label><input id="company" type="text"></div>
-          </div>
-          <div class="field-row">
-            <div class="field"><label for="phone">Phone number *</label><input id="phone" type="tel" required></div>
-            <div class="field"><label for="email">Email</label><input id="email" type="email"></div>
-          </div>
-        </fieldset>
+      
 
-        <fieldset>
-          <legend>Shipment details</legend>
-          <div class="field">
-            <label for="service">Service needed</label>
-            <select id="service">
-              <option>Full Truck Load (FTL)</option>
-              <option>Part Truck Load (PTL)</option>
-              <option>Warehousing &amp; 3PL</option>
-              <option>Air Transportation</option>
-              <option>Not sure — advise me</option>
-            </select>
-          </div>
-          <div class="field-row">
-            <div class="field"><label for="origin">Pickup location</label><input id="origin" type="text" placeholder="City / area"></div>
-            <div class="field"><label for="destination">Delivery location</label><input id="destination" type="text" placeholder="City / area"></div>
-          </div>
-          <div class="field-row">
-            <div class="field"><label for="weight">Approx. weight / volume</label><input id="weight" type="text" placeholder="e.g. 5 tons, 200 cartons"></div>
-            <div class="field"><label for="date">Preferred pickup date</label><input id="date" type="date"></div>
-          </div>
-          <div class="field"><label for="msg">Anything else we should know?</label><textarea id="msg" placeholder="Fragile items, recurring shipment, specific timeline..."></textarea></div>
-        </fieldset>
+        <form action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="f1b161a6-9133-4bdf-af2b-1ab488d27781">
+  <input type="hidden" name="subject" value="New Freight Quote Request - AOCL India">
 
-        <button class="btn btn-primary" type="submit">Send Request →</button>
-        <div class="form-note">This form is a working template — connect it to Formspree, Google Sheets, or your own backend to start receiving real submissions.</div>
-      </form>
+  <fieldset>
+    <legend>Your details</legend>
+    <div class="field-row">
+      <div class="field"><label for="name">Contact person *</label><input id="name" name="name" type="text" required></div>
+      <div class="field"><label for="company">Company name</label><input id="company" name="company" type="text"></div>
     </div>
-  </section>
-</main>
+    <div class="field-row">
+      <div class="field"><label for="phone">Phone number *</label><input id="phone" name="phone" type="tel" required></div>
+      <div class="field"><label for="email">Email</label><input id="email" name="email" type="email"></div>
+    </div>
+  </fieldset>
 
-<footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-brand">
-        <div class="logo-text">AOCL <span style="color:#FFB627;">INDIA</span></div>
-        <p>Transforming supply chains across India — FTL, PTL, warehousing, and air logistics, delivered mile by mile.</p>
-      </div>
+  <fieldset>
+    <legend>Shipment details</legend>
+    <div class="field">
+      <label for="service">Service needed</label>
+      <select id="service" name="service">
+        <option>Full Truck Load (FTL)</option>
+        <option>Part Truck Load (PTL)</option>
+        <option>Warehousing &amp; 3PL</option>
+        <option>Air Transportation</option>
+        <option>Not sure – advise me</option>
+      </select>
+    </div>
+    <div class="field-row">
+      <div class="field"><label for="origin">Pickup location</label><input id="origin" name="origin" type="text" placeholder="City / area"></div>
+      <div class="field"><label for="destination">Delivery location</label><input id="destination" name="destination" type="text" placeholder="City / area"></div>
+    </div>
+    <div class="field-row">
+      <div class="field"><label for="weight">Approx. weight / volume</label><input id="weight" name="weight" type="text" placeholder="e.g. 5
       <div class="foot-col">
         <h5>Services</h5>
         <a href="services.html">Full Truck Load</a>
@@ -123,9 +109,16 @@
     <div class="foot-bottom">
       <div>© 2026 AOCL India. All rights reserved. Established 2019.</div>
       <div class="mono">Built mile by mile.</div>
+      
     </div>
   </div>
+ 
+</a>
 </footer>
-
+ <!-- Floating WhatsApp Quote Button -->
+<a href="https://wa.me/919876543210?text=Hi%20Aone%20Carriers,%20I%20need%20a%20freight%20quote." 
+   target="_blank" 
+   style="position:fixed; bottom:20px; right:20px; background-color:#25D366; color:white; padding:12px 20px; border-radius:50px; text-decoration:none; font-family:sans-serif; font-weight:bold; box-shadow:0 4px 10px rgba(0,0,0,0.3); z-index:1000;">
+   💬 Whatsapp Quote
 </body>
 </html>
